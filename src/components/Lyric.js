@@ -1,9 +1,13 @@
 import React from "react";
 
 function Lyric({ lyric }) {
+  if (lyric.length === 0) {
+    return null;
+  }
+
   return (
     <div>
-      <h2>Lyric of the song</h2>
+      <h2>Lyrics</h2>
       <p className="letra">{lyric}</p>
     </div>
   );
